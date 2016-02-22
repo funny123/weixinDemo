@@ -19,9 +19,9 @@ class Weixin_menu_api
     //获取access_token
     public function get_access_token()
     {
-        $this->last_time=1455526349;
-        $access_token="yn4A3NVE_QS-IUX-BvHBveNhOtcq-KJmB8xELU3_k7V5CJqvIRPS3lNCCG1oNZOS3za3irVVIGxNx0u_Jrkz9b-C6Bvmb6AUn1289zDng0uAXwbdzCZZwRcLQpBNonWYEAUbAFAZVP";
-
+        $this->last_time='1456129332';
+        $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$this->appid}&secret={$this->appsecret}";
+        $access_token='yn4A3NVE_QS-IUX-BvHBvZkutgv6ieiupItCDIj81OVmOT28NoTwYG9TTe-ywSgPo1cX-Z78IhWq6hzqKx-U6td9cmmBbgO0ijOgw0NOgRw6uW3Mv4jCPBfOOL_X0sioZKVbABAPAL';
         if(time()>($this->last_time +7200))
         {
             $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$this->appid}&secret={$this->appsecret}";

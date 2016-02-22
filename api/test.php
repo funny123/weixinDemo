@@ -9,6 +9,7 @@
 
 $weixin_menu =new Weixin_menu_api('wx6e090e3708211f6d','80719b785ac8b5fabf3fcf347189d266');
 //echo $weixin_menu->get_access_token();
+/*
 $arr=<<<EOF
 {
     "button": [
@@ -70,5 +71,35 @@ $arr=<<<EOF
     ]
 }
 EOF;
-$weixin_menu->menu_create($arr);
+*/
+$data = '{
+     "button":[
+     {
+          "type":"click",
+          "name":"首页",
+          "key":"home"
+      },
+      {
+           "type":"click",
+           "name":"简介",
+           "key":"introduct"
+      },
+      {
+           "name":"菜单",
+           "sub_button":[
+            {
+               "type":"click",
+               "name":"hello word",
+               "key":"V1001_HELLO_WORLD"
+            },
+            {
+               "type":"click",
+               "name":"赞一下我们",
+               "key":"V1001_GOOD"
+            }]
+       }]
+}';
+$weixin_menu->menu_create($data);
+
+var_dump($weixin_menu->menu_select());
 
